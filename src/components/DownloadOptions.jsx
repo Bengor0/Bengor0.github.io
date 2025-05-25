@@ -12,7 +12,7 @@ import "./../styles/DownloadList.css";
  * @param {() => void} setIsCheckboxChecked - sets the state of App component when the checkbox is clicked
  * @returns download options UI
  */
-export default function DownloadListOptions({ results, query, initialSearch, isCheckboxChecked, setIsCheckboxChecked }) {
+export default function DownloadOptions({ results, query, initialSearch, isCheckboxChecked, setIsCheckboxChecked }) {
 
   //function to parse JSON from API to a string
   const downloadJSON = () => {

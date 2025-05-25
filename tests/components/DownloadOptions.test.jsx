@@ -1,10 +1,10 @@
 import React from "react";
 import { describe, it, expect, vi, afterEach } from "vitest";
-import {  render, screen, cleanup } from "@testing-library/react";
-import DownloadListOptions from "../../src/components/DownloadListOptions";
+import { render, screen, cleanup } from "@testing-library/react";
+import DownloadOptions from "../../src/components/DownloadOptions";
 import "@testing-library/jest-dom/vitest";
 
-describe("DownloadListOptions", () => {
+describe("DownloadOptions", () => {
   afterEach(() => {
     cleanup();
   });
@@ -30,7 +30,7 @@ describe("DownloadListOptions", () => {
 
   it("should render 2 <p>, 1 <img>, 2 <button>, 1 <input> and 1 <span> with text 'Hide' if results are provided and checkbox is checked", () => {
     const { container } = render(
-      <DownloadListOptions
+      <DownloadOptions
         results={testResults}
         query={testQuery}
         initialSearch={false}
@@ -57,7 +57,7 @@ describe("DownloadListOptions", () => {
 
   it("should render 2 <p>, 1 <img>, 2 <button>, 1 <input> and 1 <span> with text 'Show' if results are provided and checkbox is not checked", () => {
     const { container } = render(
-      <DownloadListOptions
+      <DownloadOptions
         results={testResults}
         query={testQuery}
         initialSearch={false}
@@ -84,7 +84,7 @@ describe("DownloadListOptions", () => {
 
   it("should render 1 <p> element if results are not provided and its not the initial search", () => {
     render(
-      <DownloadListOptions
+      <DownloadOptions
         results={[]}
         query={testQuery}
         initialSearch={false}
@@ -101,7 +101,7 @@ describe("DownloadListOptions", () => {
 
   it("should be empty DOM element if results are not provided and it is initial search", () => {
     const { container } = render(
-      <DownloadListOptions
+      <DownloadOptions
         results={[]}
         query={"social media"}
         initialSearch={true}

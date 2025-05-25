@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Headline from "./components/Headline";
 import SearchGoogle from "./components/SearchGoogle";
-import DownloadListOptions from "./components/DownloadListOptions";
+import DownloadOptions from "./components/DownloadOptions";
 import SearchList from "./components/SearchList";
 import "./App.css";
 
@@ -43,7 +43,7 @@ export default function App() {
           setInitialSearch={setInitialSearch}
         />
         <div className="flex-container center-content">
-          <DownloadListOptions
+          <DownloadOptions
             results={results}
             query={previousQuery}
             initialSearch={initialSearch}
