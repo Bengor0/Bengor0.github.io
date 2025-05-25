@@ -11,12 +11,12 @@ import "./../styles/Headline.css";
  * @returns Animatable headline for page header
  */
 export default function Headline({
-  headlineText,
   error,
   isErrorAnimated,
   setIsErrorAnimated,
 }) {
   const [className, setClassName] = useState("headline");
+  const headlineText = "Google";
   const headlineArray = headlineText.split("");
   const timeoutTime = (headlineArray.length - 1) * 70 + 500;
 

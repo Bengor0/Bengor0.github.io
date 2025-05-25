@@ -13,12 +13,10 @@ export default function App() {
   const [isErrorAnimated, setIsErrorAnimated] = useState(false);
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
   const [initialSearch, setInitialSearch] = useState(true);
-  const headlineText = "Google";
 
   const animateError = () => {
     !isErrorAnimated && setIsErrorAnimated(true);
   };
-
 
   return (
     <>
@@ -27,7 +25,6 @@ export default function App() {
         style={{ alignItems: "center", justifyContent: "center" }}
       >
         <Headline
-          headlineText={headlineText}
           error={error}
           isErrorAnimated={isErrorAnimated}
           setIsErrorAnimated={setIsErrorAnimated}
@@ -42,18 +39,14 @@ export default function App() {
           animateError={animateError}
           setInitialSearch={setInitialSearch}
         />
-        <div className="flex-container center-content">
-          <DownloadOptions
-            results={results}
-            query={previousQuery}
-            initialSearch={initialSearch}
-            isCheckboxChecked={isCheckboxChecked}
-            setIsCheckboxChecked={setIsCheckboxChecked}
-          />
-        </div>
-        <div className="flex-container center-content">
-          <SearchList results={results} isCheckboxChecked={isCheckboxChecked}/>
-        </div>
+        <DownloadOptions
+          results={results}
+          query={previousQuery}
+          initialSearch={initialSearch}
+          isCheckboxChecked={isCheckboxChecked}
+          setIsCheckboxChecked={setIsCheckboxChecked}
+        />
+        <SearchList results={results} isCheckboxChecked={isCheckboxChecked} />
       </main>
       <footer></footer>
     </>
