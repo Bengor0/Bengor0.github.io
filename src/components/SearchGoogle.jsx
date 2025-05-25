@@ -65,7 +65,7 @@ export default function SearchGoogle({
             alt="search-icon.svg"
           />
           <input
-            id="sear-input"
+            id="search-input"
             className="search-input"
             type="text"
             value={currentQuery}
